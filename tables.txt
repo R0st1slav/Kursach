@@ -1,0 +1,6 @@
+create table Student(FIO varchar(100), Birthday integer, NSpec varchar(100), idStud integer primary key autoincrement,
+idGroup integer);
+create table Grp(NGroup varchar(100), idGroup integer primary key autoincrement);
+create table Disc(NDisc varchar(100), idGroup integer, idDisc integer primary key autoincrement);
+create table Karma(count integer, grade float, idStud integer, idDisc integer, primary key(idStud, idDisc));
+

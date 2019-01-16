@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <children>
+        <TableView fx:id="students" layoutX="14.0" layoutY="53.0" maxWidth="418.0" prefHeight="243.0" prefWidth="418.0">
+            <columns>
+                <TableColumn fx:id="columnFio" prefWidth="100.0" text="Студент" />
+                <TableColumn fx:id="columnBirthday" prefWidth="107.0" text="Дата Рождения" />
+                <TableColumn fx:id="columnSpec" prefWidth="98.0" text="Специальность" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Button fx:id="add_button" layoutX="14.0" layoutY="304.0" mnemonicParsing="false" onAction="#AddData" prefHeight="32.0" prefWidth="207.0" text="Добавить" />
+        <TableView fx:id="Group" layoutX="456.0" layoutY="52.0" prefHeight="243.0" prefWidth="402.0">
+            <columns>
+                <TableColumn fx:id="columnFIO" prefWidth="172.0" text="Студент" />
+                <TableColumn fx:id="columnGroup" prefWidth="158.0" text="Группа" />
+            </columns>
+        </TableView>
+        <Label layoutX="456.0" layoutY="27.0" prefHeight="25.0" prefWidth="102.0" text="Список групп">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnNext" layoutX="14.0" layoutY="579.0" mnemonicParsing="false" onAction="#nextDay" prefHeight="32.0" prefWidth="207.0" text="Следующий день" />
+        <Label layoutX="14.0" layoutY="27.0" text="Список студентов">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Button layoutX="225.0" layoutY="304.0" mnemonicParsing="false" onAction="#DeleteData" prefHeight="32.0" prefWidth="207.0" text="Удалить" />
+      <TableView fx:id="Karma" layoutX="14.0" layoutY="368.0" prefHeight="209.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="karmaStudent" prefWidth="105.0" text="Студент" />
+          <TableColumn fx:id="karmaDiscipline" prefWidth="120.0" text="Дисциплина" />
+            <TableColumn fx:id="karmaGroup" prefWidth="86.0" text="Группа" />
+            <TableColumn fx:id="karmaCount" prefWidth="104.0" text="Карма" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="343.0" prefHeight="25.0" prefWidth="146.0" text="Начисление кармы">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="resultKarma" layoutX="456.0" layoutY="579.0" mnemonicParsing="false" onAction="#btnKarma" prefHeight="32.0" prefWidth="108.0" text="Подсчет кармы" />
+      <TableView fx:id="Result" layoutX="456.0" layoutY="336.0" prefHeight="243.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="resultStudent" prefWidth="75.0" text="Студент" />
+          <TableColumn fx:id="resultDiscipline" prefWidth="106.0" text="Дисциплина" />
+            <TableColumn fx:id="resultGroup" prefWidth="85.0" text="Группа" />
+            <TableColumn fx:id="resultGrade" prefWidth="115.0" text="Оценка" />
+        </columns>
+      </TableView>
+      <Label layoutX="456.0" layoutY="308.0" prefHeight="25.0" prefWidth="119.0" text="Подсчет кармы">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="clearTable" layoutX="741.0" layoutY="579.0" mnemonicParsing="false" onAction="#Clear" prefHeight="32.0" prefWidth="119.0" text="Очистить оценки" />
+      <Button layoutX="225.0" layoutY="579.0" mnemonicParsing="false" onAction="#ClearKarma" prefHeight="32.0" prefWidth="207.0" text="Очистить карму" />
+      <Button layoutX="573.0" layoutY="579.0" mnemonicParsing="false" onAction="#goodBye" prefHeight="32.0" prefWidth="160.0" text="Отчислить студентов" />
+    </children>
+</AnchorPane>
